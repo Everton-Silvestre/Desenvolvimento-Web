@@ -1,7 +1,29 @@
-﻿@{
+﻿@model IEnumerable<Pergunta>
+@{
     @*Layout = "_LayoutB";
         Layout = null;*@
 }
 
-<h1 style="background-color:lightblue">Home</h1>
+<img src="~/pc.jpg" asp-append-version="true" />
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <p>@item.Id</p>
+            <p>@item.Autor</p>
+            <p>@item.Descricao</p>
+        </li>
+    }
+</ul>
+
+
+
+<h1 style="background-color:lightblue">View Bag @ViewBag.Nome</h1>
+<h1>View Data @ViewData["NomeDoAluno"]</h1>
+
 <p>Twitter @@rodolfofadino</p>
+
+@*<p>@Model.Id</p>
+    <p>@Model.Autor</p>
+    <p>@Model.Descricao</p>*@
