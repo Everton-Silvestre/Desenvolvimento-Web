@@ -13,6 +13,7 @@ namespace Fiap01
             //var intervalo = new Intervalo();
             // Console.WriteLine("Hello World!");            
             BuildWebHost(args).Run();
+
         }
 
         public static IWebHost BuildWebHost(string[] args)
